@@ -1,0 +1,9 @@
+from sqlalchemy import Column, Integer, String
+from app.onboarding.database import engine, Base
+
+class Academics(Base):
+    __tablename__ = "academics"
+
+    id = Column(Integer, primary_key=True, index=True)
+    school_id = Column(Integer)
+    classes = Column(String)
