@@ -1,0 +1,10 @@
+from sqlalchemy import Column, Integer, String
+from app.onboarding.database import engine, Base
+
+class Branding(Base):
+    __tablename__ = "branding"
+
+    id = Column(Integer, primary_key=True, index=True)
+    school_id = Column(Integer)
+    logo = Column(String)
+    theme = Column(String)
